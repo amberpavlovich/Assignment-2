@@ -56,8 +56,8 @@ void test_shape() {
     Shape square("square");
 
     // draw shapes
-    for (int y = 0; y <= b.size_y - Shape::size_y; y += Shape::size_y) {
-       for (int x = 0; x <= b.size_x - Shape::size_x*2; x += Shape::size_x*2) {
+    for (unsigned int y = 0; y <= b.size_y - Shape::size_y; y += Shape::size_y) {
+       for (unsigned int x = 0; x <= b.size_x - Shape::size_x*2; x += Shape::size_x*2) {
           triangle.drawToBuffer(b, x + Shape::size_x*((y+0)%2), y);
             square.drawToBuffer(b, x + Shape::size_x*((y+1)%2), y);
         }
